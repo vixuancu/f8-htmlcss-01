@@ -41,17 +41,19 @@ a {
 }
 .line-clamp {
   display: -webkit-box;
-  -webkit-line-clamp: var(--line-clamp, 2); /*giới hạn 2 dòng; 2giá trị mặc định*/
+  -webkit-line-clamp: var(
+    --line-clamp,
+    2
+  ); /*giới hạn 2 dòng; 2giá trị mặc định*/
   -webkit-box-orient: vertical;
   overflow: hidden; /*thì class thò ra thì ẩn ljai*/
 }
-.content {
+/* .content {
   cli
-}
+} */
 /* Header========================= */
 .header {
   background: #e6f0ff;
-  /* background: green; */
   height: 100vh; /* chiều cao full màn hình */
 }
 .navbar {
@@ -150,9 +152,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.clients .stars {
-  /* margin-left: auto;  trường hợp này không sử dụng */
-}
+
 .clients .desc {
   font-size: 1.6rem; /*đổi về rem*/
   font-weight: 500;
@@ -178,7 +178,7 @@ a {
 }
 .guides .sub-title {
   position: relative; /* để căn cái gạch ngang*/
-  
+
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1;
@@ -358,16 +358,16 @@ a {
   width: 50%;
 }
 .stats .img-block .image {
-  display: block;/*tạo thẻ block*/
-  margin-left: auto;/*đẩy thẻ sang phải khi thẻ là block*/
+  display: block; /*tạo thẻ block*/
+  margin-left: auto; /*đẩy thẻ sang phải khi thẻ là block*/
   width: 400px;
   height: 460px;
-  object-fit: cover;/*giữ đúng tỉ lệ ảnh nấp đầy khung hình*/
+  object-fit: cover; /*giữ đúng tỉ lệ ảnh nấp đầy khung hình*/
   border-radius: 12px;
 }
 /*định vị ảnh 2*/
 .stats .img-block {
-  position: relative;/*vị trí gốc*/
+  position: relative; /*vị trí gốc*/
 }
 .stats-trend {
   position: absolute;
@@ -379,34 +379,34 @@ a {
   background-color: #fff;
 }
 .stats-trend .value {
-font-size: 2.6rem;
-font-weight: 700;
-line-height: 1;
-letter-spacing: 0.01em;
-color: #000339;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #000339;
 }
 .stats-trend .icon {
   /* không phải thêm display:block vì thẻ cha row có display là flex */
   margin-left: auto;
 }
 .stats-trend .desc {
-margin-top: 8px;
-font-size: 1.2rem;
-font-weight: 400;
-line-height: 1.5;
-color: #A7A7A7;
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #a7a7a7;
 }
 .stats-trend .separate {
-margin-top: 25px;
-/* width: 193.62px  để tự động*/
-height: 2px;
-background-color: #E9E9E9;
+  margin-top: 25px;
+  /* width: 193.62px  để tự động*/
+  height: 2px;
+  background-color: #e9e9e9;
 }
 .stats .avatar-block {
   display: flex;
   flex-wrap: wrap;
   margin-top: 26px;
-  gap: 16px 14px;/* khoảng cách hàng rồi cột*/
+  gap: 16px 14px; /* khoảng cách hàng rồi cột*/
 }
 .stats .avatar-group {
   display: flex;
@@ -420,16 +420,15 @@ background-color: #E9E9E9;
   object-fit: cover;
   border-radius: 50%;
   margin-left: -3px;
-  background-color: var(--bg-color,#fff);
+  background-color: var(--bg-color, #fff);
   font-size: 0.8rem;
   font-weight: 450;
   letter-spacing: -0.02em;
   color: #fff;
 }
 .stats .avatar:first-child {
-  margin-left: 0; 
+  margin-left: 0;
 }
-
 
 /* có 2 cách căn chiều cao
 1.dùng line-height bằng chiều cao và dùng text-align căn chiều ngang
@@ -440,31 +439,31 @@ background-color: #E9E9E9;
   padding: 79px 0 0 165px;
 }
 .stats .sub-title {
-  position: relative;/*thuộc tính vị trí nổi ko va chạm*/
+  position: relative; /*thuộc tính vị trí nổi ko va chạm*/
   width: 269px;
-font-size: 3.5rem;
-font-weight: 600;
-line-height: 1.29;
-color: #000339;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.29;
+  color: #000339;
 }
 .stats .sub-title::before {
   position: absolute;
   top: -10px;
   left: 0;
   content: "";
-  display: block;/*để xét đước w h*/
+  display: block; /*để xét đước w h*/
   width: 41px;
   height: 4px;
   border-radius: 12px;
   background-color: #000339;
 }
 .stats .info .desc {
-width: 309px;
-margin-top: 20px;
-font-size: 1.6rem;
-font-weight: 400;
-line-height: 1.875;
-color: #5A6473;
+  width: 309px;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.875;
+  color: #5a6473;
 }
 .stats .row-qty {
   justify-content: space-between;
@@ -472,17 +471,17 @@ color: #5A6473;
   padding: 0 32px;
 }
 .stats .qty {
-font-size: 6.4rem;
-font-weight: 600;
-line-height: 1;
-color: #000;
+  font-size: 6.4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #000;
 }
 .stats .qty-desc {
-margin-top: 24px;/*mt nếu thẻ cha ngay trên nó thì bị colap*/
-font-size: 1.8rem;
-font-weight: 500;
-line-height: 1.5;
-color: #7B8087;
+  margin-top: 24px; /*mt nếu thẻ cha ngay trên nó thì bị colap*/
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #7b8087;
 }
 /* subscription======== */
 .subscription {
@@ -502,18 +501,18 @@ color: #7B8087;
   padding: 0 80px;
 }
 .subscription .info .sub-title {
-font-size: 3.5rem;
-font-weight: 600;
-line-height: 1.5;
-color: #fff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
 }
 .subscription .info .desc {
   margin-top: 15px;
-font-size: 1.6rem;
-font-weight: 400;
-line-height: 1.875;
-color: #fff;
-opacity: 0.75;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.875;
+  color: #fff;
+  opacity: 0.75;
 }
 .subscription .btn {
   margin-top: 20px;
@@ -539,30 +538,31 @@ opacity: 0.75;
   gap: 185px;
 }
 .footer .heading {
-font-family: 'Lato',sans-serif;
-font-size: 2rem;
-font-weight: 700;
-line-height: 1.2;
-color: #1C1C1D;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1c1c1d;
 }
-.footer .list,.footer .desc {
+.footer .list,
+.footer .desc {
   margin-top: 42px;
 }
 .footer .item {
   margin-top: 18px;
 }
 .footer .item a {
-font-size: 1.6;
-font-weight: 400;
-line-height: 1.5;
-color: #7A7A7E;
-white-space: nowrap;/*khong xuống dòng bởi giới hạn thẻ cha*/
+  font-size: 1.6;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #7a7a7e;
+  white-space: nowrap; /*khong xuống dòng bởi giới hạn thẻ cha*/
 }
 .footer .desc {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75;
-  color: #7A7A7E;
+  color: #7a7a7e;
 }
 .footer .social {
   display: flex;
@@ -577,7 +577,7 @@ white-space: nowrap;/*khong xuống dòng bởi giới hạn thẻ cha*/
   border-radius: 3px;
 }
 .footer .social-link:hover {
-background-color: #e2dfdf;
+  background-color: #e2dfdf;
 }
 .footer .row-botton {
   margin-top: 81px;
@@ -586,8 +586,8 @@ background-color: #e2dfdf;
   justify-content: space-between;
 }
 .footer .copyright {
-font-size: 1.4rem;
-font-weight: 400;
-line-height: 1.5;
-color: #C2C2C2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #c2c2c2;
 }
