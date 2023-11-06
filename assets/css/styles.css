@@ -5,7 +5,10 @@
 :root {
   --primary-color: #0f1b4c;
 }
-
+html,
+body {
+  scroll-behavior: smooth;
+}
 html {
   font-size: 62.5%;
 }
@@ -51,15 +54,27 @@ a {
 /* .content {
   cli
 } */
-/* Header========================= */
-.header {
+/* Header/hero-wrap========================= */
+.hero-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*vì đang đổi chiều căn chiều dọc dùng theo chiều ngang*/
   background: #e6f0ff;
-  height: 100vh; /* chiều cao full màn hình */
+  height: calc(100vh - 90px); /* chiều cao full màn hình */
+}
+.fixed-header {
+  background-color: #e6f0ff;
+  padding-top: 26px;
+  position: sticky;
+  top: -26px;
+  z-index: 1;
 }
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px; /* dùng padding thay cho mg vì bị colap nên xem lại video*/
+  padding: 12px 0;
+  /* padding-top: 38px;  dùng padding thay cho mg vì bị colap nên xem lại video*/
 }
 
 .navbar ul {
@@ -94,15 +109,12 @@ a {
 }
 
 /* phần hero ở header */
-.hero {
-  margin-top: 130px;
-}
 
-.hero .info {
+.hero-wrap .info {
   width: 50.5%;
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5; /*27 chia 18 ra độ cao dòng*/
@@ -111,7 +123,7 @@ a {
   color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
   margin-top: 8px;
   font-size: 6.2rem;
   font-weight: 700;
@@ -121,7 +133,7 @@ a {
   color: #000336;
 }
 
-.hero .desc {
+.hero-wrap .desc {
   margin-top: 30px;
   font-size: 1.8rem;
   font-weight: 400;
@@ -138,8 +150,8 @@ a {
 
 .hero-img {
   position: absolute;
-  bottom: 0;
   right: calc((100vw - 1110px) / 2 - 100px); /* vị trí cần sử dụng calc*/
+  bottom: 0;
 }
 
 /*==========clients============*/
@@ -165,10 +177,20 @@ a {
 }
 
 .clients .images {
-  margin-top: 96px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.clients .images a {
+  display: flex; /*thẻ a inline ko định dạng được chiều cao(dùng dc inline-block)*/
+  align-items: center;
+  height: 90px;
+  padding: 0 42px;
+}
+.clients .images a:hover {
+  box-shadow: 0px 10px 20px 0px #0000001a;
+  border-radius: 12px;
 }
 /* ==========guides=========== */
 .guides {
@@ -575,6 +597,11 @@ a {
   width: 28px;
   height: 28px;
   border-radius: 3px;
+  background-color: #f9f9f9;
+}
+/* nên viết theo phần này */
+.footer .social-link + .social-link {
+  margin-left: 16px;
 }
 .footer .social-link:hover {
   background-color: #e2dfdf;
