@@ -550,7 +550,7 @@ a {
 /* footer */
 .footer {
   margin-top: 55px;
-  padding: 50px 0 0 58px;
+  padding: 50px 0 58px;
   /* background-color:orange; */
 }
 .footer .row {
